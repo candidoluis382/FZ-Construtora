@@ -1,0 +1,2912 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description"
+    content="Residencial Portobello — Casas de altíssimo padrão em Mangaratiba, RJ. Apenas 5 residências exclusivas com lotes de 2.695 m² e hangar aeronáutico privativo." />
+  <title>Residencial Portobello — Casas de Luxo em Mangaratiba, RJ</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="atelier-ai.aura.build/assets/cfa83a21b5a6b1d8_css2.css" rel="stylesheet" />
+
+  <!-- Tailwind & Lucide Libraries -->
+  <script src="atelier-ai.aura.build/assets/176e894661aa9cdc_3.4.17"></script>
+  <script src="atelier-ai.aura.build/assets/0c0f06912fe3ea9a_lucide.min.js"></script>
+
+  <!-- Animation CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: auto !important;
+      overflow-x: hidden !important;
+    }
+
+    :root {
+      --paper: #F2F2F0;
+      --ink: #161820;
+      --muted: #3B6278;
+      --taupe: #3B6278;
+      --panel: #C8CDD0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      overflow-x: hidden !important;
+      background:
+        radial-gradient(circle at 12% 16%, rgba(255, 255, 255, 0.72), transparent 30%),
+        radial-gradient(circle at 82% 10%, rgba(180, 210, 190, 0.30), transparent 34%),
+        #E5ECE7;
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    .font-logo {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .font-display {
+      font-family: "Newsreader", serif;
+    }
+
+    .premium-panel {
+      border: 1px solid #C8CDD0;
+      background: #C8CDD0;
+      box-shadow:
+        0 24px 64px rgba(42, 31, 22, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    }
+
+    /* Document elements design system */
+    .docs-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid #C8CDD0;
+      background: #C8CDD0;
+      color: #1E3040;
+      margin-bottom: 1rem;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: default;
+    }
+    /* Elegant Metallic Shine Sweep & Premium Button Hover Effects */
+    .btn-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shine::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.30) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-25deg);
+      animation: shine-sweep 6s infinite ease-in-out;
+      z-index: 20;
+      pointer-events: none;
+    }
+    @keyframes shine-sweep {
+      0% {
+        left: -150%;
+      }
+      15% {
+        left: 150%;
+      }
+      100% {
+        left: 150%;
+      }
+    }
+
+    .btn-primary {
+      position: relative;
+      background: linear-gradient(135deg, #161820 0%, #252E3E 100%);
+      box-shadow: 0 24px 54px rgba(28, 22, 17, 0.18);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #1E3040 0%, #3B6278 100%);
+      opacity: 0;
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+      border-radius: inherit;
+    }
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.015);
+      box-shadow: 0 28px 60px rgba(30, 48, 64, 0.28);
+    }
+    .btn-primary:hover::before {
+      opacity: 1;
+    }
+
+    .btn-secondary {
+      background-color: #C8CDD0;
+      border: 1px solid #C8CDD0;
+      color: #161820;
+      box-shadow: 0 12px 28px rgba(88, 72, 58, 0.055);
+      transition: 
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-secondary:hover {
+      transform: translateY(-4px) scale(1.015);
+      background-color: #F2F2F0;
+      border-color: #3B6278;
+      box-shadow: 0 16px 36px rgba(59, 98, 120, 0.15);
+    }
+
+    .btn-header {
+      background-color: #1E3040;
+      color: #ffffff;
+      transition: 
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-header:hover {
+      transform: translateY(-2px);
+      background-color: #3B6278;
+      box-shadow: 0 12px 24px rgba(59, 98, 120, 0.25);
+    }
+
+    /* Animation utility classes to avoid layout shifts or flashes */
+    .hero-badge {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-headline {
+      opacity: 0;
+    }
+
+    .decorative-line {
+      width: 0;
+    }
+
+    .hero-body {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-cta a {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-metrics-item {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-subtext {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    .image-wrapper-anim {
+      clip-path: inset(0% 100% 0% 0% round 1.35rem 0 0 1.35rem);
+    }
+
+    .floating-card {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+
+    /* Custom split line container for reveal animation */
+    .hero-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #161820 0%, #1E3040 50%, #3B6278 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Concept Section styling & animations */
+    .concept-image-frame {
+      /* Shadow is handled on the actual image wrapper */
+    }
+    .concept-main-image-wrapper {
+      clip-path: inset(0% 100% 0% 0% round 0 1.35rem 1.35rem 0);
+    }
+    .concept-secondary-image-wrapper {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .concept-compass-badge {
+      opacity: 0;
+      transform: scale(0);
+      position: absolute;
+      right: -40px;
+      top: calc(10% - 40px);
+      z-index: 30;
+    }
+    .concept-badge,
+    .concept-body {
+      opacity: 0;
+    }
+    .concept-headline {
+      opacity: 0;
+    }
+    .concept-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #161820 0%, #1E3040 60%, #3B6278 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .concept-line-land,
+    .concept-line-water {
+      transform-origin: left center;
+    }
+
+    /* Exclusividade Section styling & animations */
+    /* Exclusividade Section Sliding Accordion Showcase */
+    .exclusividade-pane {
+      opacity: 0;
+      transition: 
+        flex 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        height 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @media (min-width: 1024px) {
+      .exclusividade-pane {
+        flex: 1;
+      }
+      .exclusividade-accordion:hover .exclusividade-pane {
+        flex: 0.6;
+      }
+      .exclusividade-accordion .exclusividade-pane:hover {
+        flex: 2.8;
+        border-color: #3B6278;
+        box-shadow: 0 30px 60px -15px rgba(22, 24, 32, 0.2);
+      }
+    }
+    @media (max-width: 1023px) {
+      .exclusividade-accordion {
+        height: auto !important;
+      }
+      .exclusividade-pane {
+        height: 140px;
+      }
+      .exclusividade-accordion:hover .exclusividade-pane,
+      .exclusividade-accordion:active .exclusividade-pane {
+        height: 100px;
+      }
+      .exclusividade-accordion .exclusividade-pane:hover,
+      .exclusividade-accordion .exclusividade-pane:active {
+        height: 280px;
+        border-color: #3B6278;
+      }
+    }
+    .exclusividade-badge,
+    .exclusividade-body,
+    .exclusividade-metric-item {
+      opacity: 0;
+    }
+    .exclusividade-headline {
+      opacity: 0;
+    }
+    .exclusividade-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #161820 0%, #1E3040 60%, #3B6278 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-image-frame {
+        margin-right: 0 !important;
+        width: 100% !important;
+      }
+      .concept-image-frame {
+        margin-left: 0 !important;
+        width: 100% !important;
+      }
+    }
+    @media (min-width: 1510px) {
+      .hero-image-frame {
+        margin-right: calc((1510px - 100vw) / 2) !important;
+        width: calc(100% + (100vw - 1510px) / 2) !important;
+      }
+      .concept-image-frame {
+        margin-left: calc((1510px - 100vw) / 2) !important;
+        width: calc(100% + (100vw - 1510px) / 2) !important;
+      }
+    }
+
+    #mobile-menu-btn {
+      display: none;
+    }
+
+    @media (max-width: 1023px) {
+      #mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 16px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 100;
+      }
+      #mobile-menu-btn span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #161820;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        transform-origin: center;
+      }
+      #mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      #mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+      }
+      #mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 100%);
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+      }
+      #mobile-menu.active {
+        transform: translateX(0);
+      }
+
+      .hero-side > div,
+      .hero-headline,
+      .hero-body,
+      .concept-headline,
+      .concept-body,
+      .exclusividade-headline,
+      .exclusividade-body,
+      .lazer-headline,
+      .lazer-body,
+      .aeronautica-headline,
+      .aeronautica-body,
+      .implantacao-headline,
+      .implantacao-body,
+      .dispo-headline,
+      .dispo-body {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .concept-compass-badge {
+        display: none !important;
+      }
+
+      .hero-side {
+        min-height: auto !important;
+      }
+
+      .hero-image-frame {
+        height: 640px !important;
+        border-radius: 1.35rem !important;
+      }
+
+      .hero-visual-bleed {
+        margin-right: 0 !important;
+      }
+
+      .image-wrapper-anim {
+        border-radius: 1.35rem !important;
+        border-right-width: 1px !important;
+        clip-path: inset(0% 100% 0% 0% round 1.35rem);
+      }
+
+      /* Concept Section Responsive */
+      .concept-image-frame {
+        height: 640px !important;
+        border-radius: 1.35rem !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      .concept-visual-bleed {
+        margin-left: 0 !important;
+      }
+
+      .concept-main-image-wrapper {
+        width: 100% !important;
+        height: 85% !important;
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+        border-radius: 1.35rem !important;
+        border-left-width: 1px !important;
+        clip-path: inset(0% 100% 0% 0% round 1.35rem);
+      }
+
+      .concept-secondary-image-wrapper {
+        width: 160px !important;
+        height: 220px !important;
+        left: 1.5rem !important;
+        bottom: 2rem !important;
+      }
+
+      /* Exclusividade Section Responsive */
+      .exclusividade-image-frame {
+        height: 640px !important;
+        border-radius: 1.35rem !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      .exclusividade-visual-bleed {
+        margin-right: 0 !important;
+      }
+
+      .hero-headline,
+      .concept-headline,
+      .exclusividade-headline,
+      .lazer-headline,
+      .aeronautica-headline,
+      .implantacao-headline,
+      .dispo-headline,
+      .contato-headline {
+        opacity: 1 !important;
+        transform: none !important;
+        text-align: center !important;
+      }
+
+      .hero-headline .line,
+      .concept-headline .line,
+      .exclusividade-headline .line,
+      .lazer-headline .line,
+      .aeronautica-headline .line,
+      .implantacao-headline .line,
+      .dispo-headline .line,
+      .contato-headline .line {
+        text-align: center !important;
+        width: 100% !important;
+        display: block !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-image-frame {
+        height: 560px !important;
+      }
+
+      /* Concept Section Mobile */
+      .concept-image-frame {
+        height: 560px !important;
+      }
+
+      /* Bento Grid heights scale fluidly */
+    }
+
+    /* --- Lazer Section Styles --- */
+    #lazer {
+      background: transparent;
+    }
+
+    .lazer-badge,
+    .lazer-body,
+    .lazer-tab-item,
+    .lazer-visual-col {
+      opacity: 0;
+    }
+    .lazer-headline {
+      opacity: 0;
+    }
+    .lazer-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #161820 0%, #1E3040 60%, #3B6278 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    
+    .lazer-tab-item {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
+    }
+    
+    .lazer-tab-item.active {
+      background-color: rgba(200, 205, 208, 0.35);
+      border-color: rgba(200, 205, 208, 0.9);
+      box-shadow: 
+        0 12px 32px rgba(22, 24, 32, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+    
+    .lazer-tab-item:not(.active):hover {
+      background-color: rgba(200, 205, 208, 0.15);
+      border-color: rgba(200, 205, 208, 0.4);
+    }
+
+    .lazer-image-container {
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .lazer-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @keyframes kenburns-active {
+      0% { transform: scale(1.02); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1.02); }
+    }
+    
+    .lazer-image-container.active {
+      opacity: 1;
+      z-index: 10;
+      animation: kenburns-active 24s infinite ease-in-out;
+    }
+    
+    .lazer-image-container:not(.active) {
+      opacity: 0;
+      z-index: 1;
+      animation: none;
+    }
+
+    @media (max-width: 1023px) {
+      .lazer-tabs-wrapper {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        overflow-x: visible !important;
+        scroll-snap-type: none !important;
+        padding-bottom: 0 !important;
+      }
+      .lazer-tabs-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+      .lazer-tab-item {
+        flex-shrink: 0;
+        width: 100% !important;
+        border: 1px solid rgba(200, 205, 208, 0.5) !important;
+        background-color: rgba(200, 205, 208, 0.1) !important;
+      }
+      .lazer-tab-item.active {
+        background-color: rgba(200, 205, 208, 0.45) !important;
+        border-color: rgba(200, 205, 208, 0.9) !important;
+      }
+    }
+
+    /* --- Aeronautica Section Styles --- */
+    #hangar {
+      background-color: #161820;
+    }
+    
+    .aeronautica-badge,
+    .aeronautica-headline,
+    .aeronautica-body,
+    .aeronautica-cta,
+    .hangar-thumb {
+      opacity: 0;
+    }
+    
+    .aeronautica-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #ffffff 0%, #ECECE8 60%, #C8CDD0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    
+    .aeronautica-bg-image {
+      transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .aeronautica-bg-image.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    
+    .aeronautica-bg-image:not(.active) {
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .hangar-thumb {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border-color: transparent;
+    }
+    
+    .hangar-thumb.active {
+      border-color: #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+    }
+    
+    .hangar-thumb img {
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .hangar-thumb.active img {
+      opacity: 0.9;
+    }
+    
+    .hangar-thumb:not(.active):hover img {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 1023px) {
+      #hangar {
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+      .aeronautica-bg-wrapper {
+        height: 100% !important;
+        top: 0 !important;
+      }
+      .aeronautica-gallery-controls {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        margin-top: 2rem;
+      }
+    }
+
+    /* --- Implantação Section Styles --- */
+    #implantacao {
+      background-color: var(--paper);
+    }
+    
+    .implantacao-badge,
+    .implantacao-headline,
+    .implantacao-body,
+    .implantacao-controls,
+    .implantacao-visual-col {
+      opacity: 0;
+    }
+
+    .implantacao-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #161820 0%, #1E3040 60%, #3B6278 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Toggle Switches styling */
+    .implantacao-toggle-btn {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .implantacao-toggle-btn.active {
+      background-color: #161820;
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(22, 24, 32, 0.15);
+    }
+    
+    /* Interactive Blueprint Map */
+    .blueprint-viewer {
+      position: relative;
+      background: #C8CDD0;
+      border: 1px solid #C8CDD0;
+      box-shadow: 
+        0 30px 70px rgba(22, 24, 32, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+
+    .blueprint-image-pane {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: scale(1.02);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .blueprint-image-pane.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+      z-index: 10;
+    }
+
+    .blueprint-image-pane img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .blueprint-viewer:hover .blueprint-image-pane.active img {
+      transform: scale(1.03);
+    }
+
+    .blueprint-zoom-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 30;
+      background: rgba(242, 242, 240, 0.85);
+      border: 1px solid #C8CDD0;
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #1E3040;
+      box-shadow: 0 10px 25px rgba(22, 24, 32, 0.1);
+      opacity: 0.85;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .blueprint-viewer:hover .blueprint-zoom-badge {
+      opacity: 1;
+      transform: translateY(-2px);
+      background: rgba(242, 242, 240, 0.95);
+      box-shadow: 0 12px 30px rgba(22, 24, 32, 0.15);
+    }
+
+    .docs-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid #C8CDD0;
+      background: #C8CDD0;
+      color: #1E3040;
+      margin-bottom: 1rem;
+    }
+
+    /* Lightbox Modal Styles */
+    #planta-lightbox, #hangar-lightbox {
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), backdrop-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #planta-lightbox.active, #hangar-lightbox.active {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+    #planta-lightbox.active #lightbox-content, #hangar-lightbox.active #hangar-lightbox-content {
+      transform: scale(1) !important;
+    }
+
+    /* --- Disponibilidade Section Styles --- */
+    #disponibilidade {
+      background-color: #161820;
+    }
+    
+    .dispo-badge,
+    .dispo-headline,
+    .dispo-body,
+    .dispo-selector-col,
+    .dispo-panel-col {
+      opacity: 0;
+    }
+    
+    .dispo-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #ffffff 0%, #ECECE8 60%, #C8CDD0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Typographic available lot badges */
+    .dispo-unit-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.02);
+      font-family: "Newsreader", serif;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      cursor: default;
+    }
+    
+    .dispo-unit-badge::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.08);
+      opacity: 0.5;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .dispo-unit-badge:hover {
+      border-color: #3B6278;
+      background: rgba(59, 98, 120, 0.1);
+      color: #ffffff;
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dispo-unit-badge:hover::before {
+      border-color: #3B6278;
+      transform: rotate(45deg);
+      opacity: 1;
+    }
+
+    /* Glassmorphic Spec Panel */
+    .dispo-spec-panel {
+      position: relative;
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    /* Lot Watermark background */
+    .dispo-watermark {
+      position: absolute;
+      right: -10px;
+      bottom: -45px;
+      font-size: 150px;
+      font-weight: 900;
+      line-height: 1;
+      font-family: "Newsreader", serif;
+      pointer-events: none;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.025);
+      color: transparent;
+      user-select: none;
+      z-index: 0;
+      letter-spacing: -0.05em;
+    }
+
+    /* Specs linear meters */
+    .dispo-bar-bg {
+      height: 4px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 9999px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .dispo-bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, #3B6278, #C8CDD0);
+      border-radius: 9999px;
+      width: 0%; /* Animated via GSAP */
+      position: relative;
+      transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .dispo-bar-fill::after {
+      content: '';
+      position: absolute;
+      right: -3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    /* --- Contato/Footer Section Styles --- */
+    #contato {
+      position: relative;
+      background-color: #0c0d12;
+      overflow: hidden;
+    }
+    
+    .contato-overlay-deep {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(22, 24, 32, 0.90) 0%, rgba(12, 13, 18, 0.96) 100%);
+      z-index: 10;
+    }
+
+    .contato-badge,
+    .contato-headline,
+    .contato-subtext,
+    .contato-btn {
+      opacity: 0;
+    }
+
+    /* Contact Modal & Form */
+    #contato-modal {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), backdrop-filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    #contato-modal.active {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+
+    #contato-modal-panel {
+      transform: translateY(30px) scale(0.98);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      background: rgba(242, 242, 240, 0.95);
+      border: 1px solid #C8CDD0;
+      backdrop-filter: blur(20px);
+      box-shadow: 
+        0 30px 70px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    #contato-modal.active #contato-modal-panel {
+      transform: translateY(0) scale(1) !important;
+    }
+
+    /* Inputs Focus styling */
+    .contato-input {
+      background: rgba(200, 205, 208, 0.15) !important;
+      border: 1px solid #C8CDD0 !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .contato-input:focus {
+      outline: none !important;
+      border-color: #1E3040 !important;
+      background: rgba(200, 205, 208, 0.05) !important;
+      box-shadow: 0 0 0 4px rgba(30, 48, 64, 0.08) !important;
+    }
+    
+    .contato-headline .line {
+      overflow: hidden;
+      display: block;
+      background: linear-gradient(90deg, #ffffff 0%, #ECECE8 60%, #C8CDD0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    @media (max-width: 1023px) {
+      .dispo-watermark {
+        font-size: 110px;
+        bottom: -20px;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+
+  <!-- Semantic Header -->
+  <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-[#F2F2F0]/80 border-b border-[#C8CDD0]">
+    <nav class="mx-auto flex max-w-[1510px] items-center justify-between gap-2 sm:gap-6 px-4 h-[68px] lg:h-auto py-0 lg:py-4 sm:px-8 lg:px-12 xl:px-14">
+      <a href="#" class="font-logo shrink-0 text-[20px] sm:text-[24px] font-medium tracking-[0.12em] text-[#161820]">
+        Portobello
+      </a>
+      <div class="hidden items-center gap-8 text-[16px] font-medium text-[#3B6278] lg:flex">
+        <a class="transition hover:text-[#161820]" href="#concept">O Empreendimento</a>
+        <a class="transition hover:text-[#161820]" href="#exclusividade">Exclusividade</a>
+        <a class="transition hover:text-[#161820]" href="#hangar">Hangar Privativo</a>
+        <a class="transition hover:text-[#161820]" href="#implantacao">Implantação</a>
+        <a class="transition hover:text-[#161820]" href="#disponibilidade">Disponibilidade</a>
+      </div>
+      <div class="hidden lg:block">
+        <a class="btn-header inline-flex h-9 sm:h-11 items-center justify-center rounded-[9px] px-3.5 sm:px-5 text-[13px] sm:text-[16px] font-semibold shadow-[0_10px_20px_rgba(25,21,18,0.12)] whitespace-nowrap"
+          href="#contato">
+          Falar com Consultor
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Drawer (Overlay) -->
+    <div id="mobile-menu" class="z-40 bg-[#F2F2F0]/95 backdrop-blur-lg flex flex-col pt-10 px-8 gap-8 lg:hidden border-t border-[#C8CDD0]">
+      <div class="flex flex-col gap-6 text-[20px] font-semibold text-[#3B6278] border-b border-[#C8CDD0] pb-8">
+        <a class="mobile-menu-link transition hover:text-[#161820]" href="#concept">O Empreendimento</a>
+        <a class="mobile-menu-link transition hover:text-[#161820]" href="#exclusividade">Exclusividade</a>
+        <a class="mobile-menu-link transition hover:text-[#161820]" href="#hangar">Hangar Privativo</a>
+        <a class="mobile-menu-link transition hover:text-[#161820]" href="#implantacao">Implantação</a>
+        <a class="mobile-menu-link transition hover:text-[#161820]" href="#disponibilidade">Disponibilidade</a>
+      </div>
+      <div class="flex flex-col">
+        <a class="btn-header mobile-menu-link inline-flex h-14 items-center justify-center rounded-xl text-[16px] font-bold shadow-lg w-full"
+          href="#contato" id="mobile-menu-cta-btn">
+          Falar com Consultor
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section containing only Hero -->
+  <main>
+    <section id="hero" class="pb-16 pt-8 lg:pb-20 border-b border-[#C8CDD0]">
+      <div class="mx-auto max-w-[1510px] px-6 sm:px-8 lg:pr-0 lg:pl-12 xl:pl-14">
+        <div class="grid items-stretch gap-14 lg:grid-cols-[0.76fr_1.24fr] xl:gap-20">
+
+          <!-- Hero Left Column: Editorial Content -->
+          <div class="hero-side flex min-h-0 lg:min-h-[735px] xl:min-h-[760px] py-12 lg:py-0 flex-col justify-center items-center lg:items-start text-center lg:text-left pr-0 lg:pr-0">
+            <div class="max-w-[700px] flex flex-col items-center lg:items-start">
+
+              <!-- Superior Badge -->
+              <div class="hero-badge docs-badge flex items-center justify-center lg:justify-start gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-[#1E3040] animate-pulse"></span>
+                <span>Rod. Rio Santos, KM 434 — Mangaratiba, RJ</span>
+              </div>
+              <!-- Main Headline -->
+              <h1 class="hero-headline font-display max-w-[780px] text-[32px] font-normal leading-[0.98] tracking-[-0.055em] text-[#161820] sm:text-[40px] md:text-[48px] lg:text-[48px] xl:text-[56px] 2xl:text-[56px] text-center lg:text-left mx-auto lg:mx-0">
+                Onde o mar encontra o horizonte de quem de fato chegou.
+              </h1>
+
+              <!-- Decorative Line -->
+              <div class="decorative-line mt-8 h-px bg-gradient-to-r from-[#3B6278] via-[#3B6278]/60 to-transparent mx-auto lg:mx-0"></div>
+
+              <!-- Body Paragraph -->
+              <p
+                class="hero-body mt-7 max-w-[39rem] text-[16px] font-medium leading-[24px] tracking-[-0.025em] text-[#161820] text-center lg:text-left mx-auto lg:mx-0">
+                O Residencial Portobello oferece o ápice da sofisticação e da privacidade em Mangaratiba. Um complexo restrito a apenas 5 residências exclusivas de altíssimo luxo, com lotes de 2.695 m², 980 m² construídos e <strong class="text-[#1E3040]">hangar aeronáutico privativo de 875 m²</strong> — um diferencial único para quem vive em outro ritmo.
+              </p>
+
+              <!-- CTA Group -->
+              <div class="hero-cta mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+                <a class="btn-primary btn-shine inline-flex h-[66px] items-center justify-center gap-4 rounded-[12px] px-8 text-[16px] font-bold text-white sm:min-w-[250px] w-full sm:w-auto"
+                  href="#contato">
+                  <span class="relative z-10">Solicitar Informações</span>
+                </a>
+                <a class="btn-secondary inline-flex h-[66px] items-center justify-center gap-4 rounded-[12px] px-8 text-[16px] font-bold sm:min-w-[250px] w-full sm:w-auto"
+                  href="#disponibilidade">
+                  <span>Ver Disponibilidade</span>
+                </a>
+              </div>
+
+              <!-- Metrics & Subtext -->
+              <div class="hero-metrics mt-10 w-full flex flex-col items-center lg:items-start">
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-y-6 text-[#161820] lg:flex-nowrap w-full">
+
+                  <!-- Metric 1 -->
+                  <div class="hero-metrics-item flex shrink-0 items-center gap-3.5 pr-5 xl:pr-6">
+                    <i data-lucide="home" class="h-6 w-6 shrink-0 text-[#3B6278]"></i>
+                    <div>
+                      <div class="whitespace-nowrap text-[12px] font-semibold text-[#3B6278]">
+                        Área Construída
+                      </div>
+                      <div class="mt-2 text-[16px] font-extrabold leading-none tracking-[-0.02em] text-[#161820]">
+                        <span id="metric-1-num">0</span> m²
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden h-12 w-px shrink-0 bg-gradient-to-b from-transparent via-[#C8CDD0] to-transparent sm:block"></div>
+
+                  <!-- Metric 2 -->
+                  <div class="hero-metrics-item flex shrink-0 items-center gap-3.5 px-5 xl:px-6">
+                    <i data-lucide="scan-search" class="h-6 w-6 shrink-0 text-[#3B6278]"></i>
+                    <div>
+                      <div class="whitespace-nowrap text-[12px] font-semibold text-[#3B6278]">
+                        Área do Lote
+                      </div>
+                      <div class="mt-2 text-[16px] font-extrabold leading-none tracking-[-0.02em] text-[#161820]">
+                        <span id="metric-2-num">0</span> m²
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden h-12 w-px shrink-0 bg-gradient-to-b from-transparent via-[#C8CDD0] to-transparent sm:block"></div>
+
+                  <!-- Metric 3 -->
+                  <div class="hero-metrics-item flex shrink-0 items-center gap-3.5 pl-5 xl:pl-6">
+                    <i data-lucide="plane" class="h-6 w-6 shrink-0 text-[#3B6278]"></i>
+                    <div>
+                      <div class="whitespace-nowrap text-[12px] font-semibold text-[#3B6278]">
+                        Hangar Aeronáutico
+                      </div>
+                      <div class="mt-2 text-[16px] font-extrabold leading-none tracking-[-0.02em] text-[#161820]">
+                        <span id="metric-3-num">0</span> m²
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="hero-subtext mt-7 text-[12px] font-medium tracking-[-0.02em] text-[#3B6278] text-center lg:text-left">
+                  5 residências exclusivas · Mangaratiba, RJ
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Image & Overlay Visuals -->
+          <div
+            class="hero-side hero-visual-bleed relative flex min-h-0 lg:min-h-[735px] items-center xl:min-h-[760px] w-full">
+            <div
+              class="hero-image-frame relative h-[735px] w-full overflow-visible rounded-tl-[1.35rem] rounded-bl-[1.35rem] rounded-tr-none rounded-br-none xl:h-[760px] shadow-[0_34px_90px_rgba(71,56,42,0.17)]">
+
+              <!-- Image Container with Gradients -->
+              <div
+                class="image-wrapper-anim relative h-full w-full overflow-hidden rounded-tl-[1.35rem] rounded-bl-[1.35rem] rounded-tr-none rounded-br-none border border-r-0 border-[#C8CDD0] bg-[#C8CDD0]">
+                <img src="portobello-porto-1.webp" alt="Fachada e Marina do Residencial Portobello"
+                  class="h-full w-full object-cover object-center" />
+                <!-- Horizontal overlay gradient -->
+                <div class="absolute inset-0"
+                  style="background: linear-gradient(90deg, rgba(242,242,240,0.10) 0%, rgba(242,242,240,0.00) 34%, rgba(22,24,32,0.04) 100%);">
+                </div>
+                <!-- Vertical overlay gradient at the footer -->
+                <div
+                  class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#161820]/26 via-[#161820]/7 to-transparent">
+                </div>
+              </div>
+
+              <!-- Floating Card overlapping the image -->
+              <div
+                class="floating-card premium-panel absolute left-1/2 -translate-x-1/2 -bottom-6 top-auto lg:-left-[70px] lg:top-8 lg:translate-x-0 lg:bottom-auto z-20 w-[280px] rounded-[15px] p-2">
+                <div
+                  class="relative overflow-hidden rounded-[11px] border border-[#C8CDD0] bg-gradient-to-br from-[#F8F8F6] to-[#ECECE8] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] flex flex-col gap-4">
+                  <div
+                    class="text-[12px] font-extrabold uppercase tracking-[0.05em] text-[#3B6278] border-b border-[#C8CDD0] pb-2">
+                    Especificações
+                  </div>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="text-[12px] font-semibold text-[#3B6278] uppercase tracking-wider">Área Construída</div>
+                      <div class="mt-1 text-[16px] font-extrabold leading-none text-[#161820]">980 m²</div>
+                    </div>
+                    <div>
+                      <div class="text-[12px] font-semibold text-[#3B6278] uppercase tracking-wider">Lote Total</div>
+                      <div class="mt-1 text-[16px] font-extrabold leading-none text-[#161820]">2.695 m²</div>
+                    </div>
+                    <div>
+                      <div class="text-[12px] font-semibold text-[#3B6278] uppercase tracking-wider">Hangar Aeronáutico</div>
+                      <div class="mt-1 text-[16px] font-extrabold leading-none text-[#161820]">875 m²</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+    </section>
+
+    <!-- Concept Section: O Empreendimento -->
+    <section id="concept" class="py-20 lg:py-28 border-b border-[#C8CDD0] overflow-hidden">
+      <div class="mx-auto max-w-[1510px] px-6 sm:px-8 lg:pl-0 lg:pr-12 xl:pr-14">
+        <div class="grid items-stretch gap-14 lg:grid-cols-[1.24fr_0.76fr] xl:gap-20">
+
+          <!-- Concept Left Column: Gallery & Sangria à esquerda -->
+          <div class="hero-side concept-visual-bleed relative flex min-h-0 lg:min-h-[735px] items-center xl:min-h-[760px] w-full">
+            <div class="concept-image-frame relative h-[735px] w-full overflow-visible rounded-tr-[1.35rem] rounded-br-[1.35rem] rounded-tl-none rounded-bl-none xl:h-[760px]">
+
+              <!-- Main Image Container -->
+              <div class="concept-main-image-wrapper absolute right-0 top-1/2 -translate-y-1/2 w-[85%] h-[80%] overflow-hidden rounded-tr-[1.35rem] rounded-br-[1.35rem] border border-l-0 border-[#C8CDD0] bg-[#C8CDD0] shadow-[0_34px_90px_rgba(71,56,42,0.17)] z-10">
+                <img src="portobello-porto-1.webp" alt="Vista do canal no Residencial Portobello"
+                  class="h-full w-full object-cover object-center" />
+                <!-- Horizontal overlay gradient to blend edges -->
+                <div class="absolute inset-0"
+                  style="background: linear-gradient(270deg, rgba(242,242,240,0.10) 0%, rgba(242,242,240,0.00) 34%, rgba(22,24,32,0.04) 100%);">
+                </div>
+                <!-- Vertical overlay gradient at the footer -->
+                <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#161820]/26 via-[#161820]/7 to-transparent">
+                </div>
+              </div>
+
+              <!-- Secondary Overlapping Image Frame (Offset, overlapping main image) -->
+              <div class="concept-secondary-image-wrapper absolute left-12 bottom-[15%] w-[240px] h-[320px] overflow-hidden rounded-[15px] border border-[#C8CDD0] bg-[#C8CDD0] p-1.5 shadow-[0_28px_54px_rgba(16,24,32,0.22)] z-20">
+                <div class="relative h-full w-full overflow-hidden rounded-[11px] border border-[#C8CDD0] bg-[#C8CDD0]">
+                  <img src="portobello-lazer-1.webp" alt="Área de lazer no Residencial Portobello"
+                    class="h-full w-full object-cover object-center" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/30 to-transparent"></div>
+                </div>
+              </div>
+
+              <!-- Floating Compass Badge (Dynamic rotating SVG) -->
+              <div class="concept-compass-badge flex h-20 w-20 items-center justify-center rounded-full border border-[#C8CDD0] bg-gradient-to-br from-[#F8F8F6]/90 to-[#ECECE8]/90 shadow-[0_12px_28px_rgba(88,72,58,0.15),inset_0_1px_0_rgba(255,255,255,0.75)] backdrop-blur-md">
+                <svg class="h-10 w-10 text-[#3B6278] animate-[spin_30s_linear_infinite]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"></path>
+                  <path d="M12 2v2M12 20v2M2 12h2M20 12h2"></path>
+                </svg>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Concept Right Column: Editorial Content -->
+          <div class="hero-side flex min-h-0 lg:min-h-[735px] py-12 lg:py-0 flex-col justify-center items-center lg:items-start text-center lg:text-left pl-0 lg:pl-0 xl:min-h-[760px] w-full">
+            <div class="max-w-[700px] flex flex-col items-center lg:items-start">
+
+              <!-- Superior Badge -->
+              <div class="concept-badge docs-badge flex items-center justify-center lg:justify-start gap-2">
+                <i data-lucide="waves" class="h-3.5 w-3.5 text-[#1E3040]"></i>
+                <span>Residencial Portobello · Mangaratiba, RJ</span>
+              </div>
+
+              <!-- Main Headline -->
+              <h2 class="concept-headline font-display max-w-[780px] text-[32px] font-normal leading-[0.98] tracking-[-0.055em] text-[#161820] sm:text-[40px] md:text-[48px] lg:text-[48px] xl:text-[56px] 2xl:text-[56px] text-center lg:text-left mx-auto lg:mx-0">
+                Uma vida construída nos dois lados do horizonte.
+              </h2>
+
+              <!-- Double Horizon Lines (motif) -->
+              <div class="concept-horizon-line mt-8 flex flex-col gap-1.5 w-[8.2rem] mx-auto lg:mx-0">
+                <div class="concept-line-land h-px bg-gradient-to-r from-[#161820] via-[#3B6278]/60 to-transparent"></div>
+                <div class="concept-line-water h-px bg-gradient-to-r from-[#3B6278] via-[#1E3040]/40 to-transparent"></div>
+              </div>
+
+              <!-- Body Paragraph -->
+              <p class="concept-body mt-7 max-w-[39rem] text-[16px] font-medium leading-[24px] tracking-[-0.025em] text-[#161820] text-center lg:text-left mx-auto lg:mx-0">
+                No Residencial Portobello, o mar não é paisagem — é vizinho. Cinco residências exclusivas às margens do Canal Whiskey, em Mangaratiba, onde cada lote começa na terra e termina na água. Um endereço que existe para quem já chegou aonde queria chegar.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Exclusividade Section: Arquitetura & Interior (Editorial Full-Width Staggered Layout) -->
+    <section id="exclusividade" class="py-20 lg:py-28 border-b border-[#C8CDD0] overflow-hidden">
+      <div class="mx-auto max-w-[1510px] px-6 sm:px-8 lg:px-12 xl:px-14">
+        
+        <!-- Row 1: Editorial Headline & Staggered Copy Block -->
+        <div class="grid gap-8 lg:grid-cols-12 xl:gap-16 items-start pb-12 lg:pb-16 border-b border-[#C8CDD0]/60">
+          
+          <!-- Column 1.1: Badge & Headline (left-aligned) -->
+          <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <!-- Superior Badge -->
+            <div class="exclusividade-badge docs-badge flex items-center justify-center lg:justify-start gap-2">
+              <i data-lucide="layout-grid" class="h-3.5 w-3.5 text-[#1E3040]"></i>
+              <span>Arquitetura · Interior</span>
+            </div>
+            
+            <!-- Main Headline -->
+            <h2 class="exclusividade-headline font-display max-w-[780px] text-[32px] font-normal leading-[0.98] tracking-[-0.055em] text-[#161820] sm:text-[40px] md:text-[48px] lg:text-[48px] xl:text-[56px] 2xl:text-[56px] mt-4 text-center lg:text-left mx-auto lg:mx-0">
+              980 m² onde cada detalhe foi pensado para impressionar quem mais importa: você.
+            </h2>
+          </div>
+          
+          <!-- Column 1.2: Body Paragraph & Metrics Grid (right-aligned) -->
+          <div class="lg:col-span-5 flex flex-col justify-between items-center lg:items-start text-center lg:text-left h-full pt-2 lg:pt-8">
+            <!-- Body Paragraph -->
+            <p class="exclusividade-body text-[16px] font-medium leading-[24px] tracking-[-0.025em] text-[#161820] max-w-[39rem] text-center lg:text-left mx-auto lg:mx-0">
+              Seis suítes, salão social de 168 m², pé-direito duplo, escada flutuante em mármore, iluminação arquitetônica em cada plano. A casa foi projetada para que o espaço fale antes das palavras.
+            </p>
+
+            <!-- Discrete Metrics Grid -->
+            <div class="exclusividade-metrics mt-8 grid grid-cols-2 gap-x-8 gap-y-4 border-t border-[#C8CDD0]/60 pt-6 w-full justify-items-center lg:justify-items-start">
+              <!-- Metric 1 -->
+              <div class="exclusividade-metric-item">
+                <div class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Salão</div>
+                <div class="mt-1 text-[15px] font-extrabold text-[#161820]">168,50 m²</div>
+              </div>
+              <!-- Metric 2 -->
+              <div class="exclusividade-metric-item text-center lg:text-left">
+                <div class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Varanda</div>
+                <div class="mt-1 text-[15px] font-extrabold text-[#161820]">69,29 m²</div>
+              </div>
+              <!-- Metric 3 -->
+              <div class="exclusividade-metric-item text-center lg:text-left">
+                <div class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Piscina</div>
+                <div class="mt-1 text-[15px] font-extrabold text-[#161820]">40,25 m²</div>
+              </div>
+              <!-- Metric 4 -->
+              <div class="exclusividade-metric-item text-center lg:text-left">
+                <div class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Deck</div>
+                <div class="mt-1 text-[15px] font-extrabold text-[#161820]">50,65 m²</div>
+              </div>
+              <!-- Metric 5 -->
+              <div class="exclusividade-metric-item text-center lg:text-left">
+                <div class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Garagem coberta</div>
+                <div class="mt-1 text-[15px] font-extrabold text-[#161820]">62,50 m²</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Cinematic Interactive Sliding Accordion Showcase -->
+        <div class="exclusividade-accordion flex flex-col lg:flex-row gap-4 lg:gap-5 w-full h-auto lg:h-[550px] xl:h-[600px] mt-12 lg:mt-16 overflow-visible">
+          
+          <!-- Pane 1: Fachada Principal -->
+          <div class="exclusividade-pane relative overflow-hidden rounded-[20px] border border-[#C8CDD0]/80 bg-[#C8CDD0] shadow-[0_15px_30px_rgba(22,24,32,0.06)] cursor-pointer group">
+            <img src="portobello-fachada-1.webp" alt="Fachada frontal principal no Residencial Portobello"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            <!-- Ambient shadow overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/60 via-[#161820]/10 to-transparent z-10 pointer-events-none"></div>
+            <!-- Glassmorphic Details Card -->
+            <div class="absolute inset-x-4 bottom-4 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] backdrop-blur-md bg-[#F2F2F0]/85 border border-[#C8CDD0] p-4 rounded-[12px] shadow-lg z-20 pointer-events-none text-center lg:text-left">
+              <h4 class="font-display text-[18px] font-normal leading-none text-[#161820] mb-1">Fachada Principal</h4>
+              <p class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Arquitetura Externa · Garagem Coberta 62,50 m²</p>
+            </div>
+          </div>
+
+          <!-- Pane 2: Salão Social -->
+          <div class="exclusividade-pane relative overflow-hidden rounded-[20px] border border-[#C8CDD0]/80 bg-[#C8CDD0] shadow-[0_15px_30px_rgba(22,24,32,0.06)] cursor-pointer group">
+            <img src="portobello-interior-1.webp" alt="Interior do salão social no Residencial Portobello"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/60 via-[#161820]/10 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-x-4 bottom-4 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] backdrop-blur-md bg-[#F2F2F0]/85 border border-[#C8CDD0] p-4 rounded-[12px] shadow-lg z-20 pointer-events-none text-center lg:text-left">
+              <h4 class="font-display text-[18px] font-normal leading-none text-[#161820] mb-1">Salão Social</h4>
+              <p class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Salão 168,50 m² · Varanda 69,29 m²</p>
+            </div>
+          </div>
+
+          <!-- Pane 3: Escada Flutuante -->
+          <div class="exclusividade-pane relative overflow-hidden rounded-[20px] border border-[#C8CDD0]/80 bg-[#C8CDD0] shadow-[0_15px_30px_rgba(22,24,32,0.06)] cursor-pointer group">
+            <img src="portobello-interior-2.webp" alt="Interior amplo com escada de mármore no Residencial Portobello"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/60 via-[#161820]/10 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-x-4 bottom-4 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] backdrop-blur-md bg-[#F2F2F0]/85 border border-[#C8CDD0] p-4 rounded-[12px] shadow-lg z-20 pointer-events-none text-center lg:text-left">
+              <h4 class="font-display text-[18px] font-normal leading-none text-[#161820] mb-1">Escada Flutuante</h4>
+              <p class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Pé-direito duplo · Escada de Mármore</p>
+            </div>
+          </div>
+
+          <!-- Pane 4: Área de Lazer -->
+          <div class="exclusividade-pane relative overflow-hidden rounded-[20px] border border-[#C8CDD0]/80 bg-[#C8CDD0] shadow-[0_15px_30px_rgba(22,24,32,0.06)] cursor-pointer group">
+            <img src="portobello-lazer-1.webp" alt="Área de lazer com piscina e deck no Residencial Portobello"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/60 via-[#161820]/10 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-x-4 bottom-4 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] backdrop-blur-md bg-[#F2F2F0]/85 border border-[#C8CDD0] p-4 rounded-[12px] shadow-lg z-20 pointer-events-none text-center lg:text-left">
+              <h4 class="font-display text-[18px] font-normal leading-none text-[#161820] mb-1">Área de Lazer</h4>
+              <p class="text-[11px] font-bold text-[#3B6278] uppercase tracking-wider">Piscina 40,25 m² · Deck 50,65 m²</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Lazer · Bem-estar -->
+    <section id="lazer" class="py-20 lg:py-28 border-b border-[#C8CDD0] overflow-hidden">
+      <div class="mx-auto max-w-[1510px] px-6 sm:px-8 lg:px-12 xl:px-14">
+        <div class="grid items-center gap-12 lg:grid-cols-[0.43fr_0.57fr] xl:gap-20">
+          
+          <!-- Left Column: Editorial & Selector -->
+          <div class="lazer-content-col flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+            <!-- Badge -->
+            <div class="lazer-badge docs-badge flex items-center justify-center lg:justify-start gap-2">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#3B6278]"></i>
+              <span>Lazer · Bem-estar</span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="lazer-headline font-display text-4xl sm:text-5xl lg:text-[50px] leading-[1.1] font-normal tracking-tight text-[#161820] mt-4 mb-6 text-center lg:text-left mx-auto lg:mx-0">
+              O clube era fora.<br />Aqui, ele é seu.
+            </h2>
+
+            <!-- Body Copy -->
+            <p class="lazer-body text-[15px] sm:text-[16px] leading-[1.6] text-[#3B6278]/90 font-medium mb-10 max-w-xl text-center lg:text-left mx-auto lg:mx-0">
+              Piscina privativa, deck de madeira nobre, hidromassagem, sauna, churrasqueira gourmet e quadra de vôlei oficial. Tudo dentro do seu lote. Sem agenda, sem fila, sem vizinho desconhecido.
+            </p>
+
+            <!-- Interactive Selector Tabs (Vertical list) -->
+            <div class="lazer-tabs-wrapper flex flex-col gap-4 w-full">
+              <!-- Tab 1 -->
+              <button class="lazer-tab-item active flex items-start text-left p-4 rounded-xl border border-transparent bg-transparent transition-all duration-300 group" data-lazer-index="0">
+                <span class="font-display text-lg text-[#3B6278]/60 font-semibold mr-4 group-[.active]:text-[#161820]">01</span>
+                <div>
+                  <h3 class="font-display text-lg font-medium text-[#3B6278]/60 leading-tight transition-colors duration-300 group-[.active]:text-[#161820] group-hover:text-[#161820]">
+                    Piscina & Deck
+                  </h3>
+                  <p class="text-xs text-[#3B6278]/50 mt-1 transition-opacity duration-300 group-[.active]:opacity-100 opacity-0 group-hover:opacity-80">
+                    Piscina privativa integrada ao deck de madeira nobre e área verde.
+                  </p>
+                </div>
+              </button>
+
+              <!-- Tab 2 -->
+              <button class="lazer-tab-item flex items-start text-left p-4 rounded-xl border border-transparent bg-transparent transition-all duration-300 group" data-lazer-index="1">
+                <span class="font-display text-lg text-[#3B6278]/60 font-semibold mr-4 group-[.active]:text-[#161820]">02</span>
+                <div>
+                  <h3 class="font-display text-lg font-medium text-[#3B6278]/60 leading-tight transition-colors duration-300 group-[.active]:text-[#161820] group-hover:text-[#161820]">
+                    Refúgio de Bem-estar
+                  </h3>
+                  <p class="text-xs text-[#3B6278]/50 mt-1 transition-opacity duration-300 group-[.active]:opacity-100 opacity-0 group-hover:opacity-80">
+                    Hidromassagem privativa e sauna exclusiva para relaxamento total.
+                  </p>
+                </div>
+              </button>
+
+              <!-- Tab 3 -->
+              <button class="lazer-tab-item flex items-start text-left p-4 rounded-xl border border-transparent bg-transparent transition-all duration-300 group" data-lazer-index="2">
+                <span class="font-display text-lg text-[#3B6278]/60 font-semibold mr-4 group-[.active]:text-[#161820]">03</span>
+                <div>
+                  <h3 class="font-display text-lg font-medium text-[#3B6278]/60 leading-tight transition-colors duration-300 group-[.active]:text-[#161820] group-hover:text-[#161820]">
+                    Espaço Gourmet & Esportes
+                  </h3>
+                  <p class="text-xs text-[#3B6278]/50 mt-1 transition-opacity duration-300 group-[.active]:opacity-100 opacity-0 group-hover:opacity-80">
+                    Churrasqueira gourmet e quadra de vôlei oficial privativa.
+                  </p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Cinematic Active Image Frame -->
+          <div class="lazer-visual-col relative h-[450px] sm:h-[550px] lg:h-[620px] w-full rounded-[24px] border border-[#C8CDD0] bg-[#C8CDD0] p-1.5 shadow-[0_24px_64px_rgba(28,22,17,0.12)] overflow-hidden z-10">
+            <div class="relative h-full w-full overflow-hidden rounded-[18px]">
+              
+              <!-- Image 1 -->
+              <div class="lazer-image-container absolute inset-0 active pointer-events-none" data-lazer-img-index="0">
+                <img src="portobello-lazer-1.webp" alt="Piscina privativa e fachada traseira no Residencial Portobello"
+                  class="h-full w-full object-cover object-center" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/40 via-transparent to-transparent"></div>
+              </div>
+
+              <!-- Image 2 -->
+              <div class="lazer-image-container absolute inset-0 pointer-events-none" data-lazer-img-index="1">
+                <img src="portobello-lazer-2.webp" alt="Área de bem-estar com hidromassagem e sauna no Residencial Portobello"
+                  class="h-full w-full object-cover object-center" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/40 via-transparent to-transparent"></div>
+              </div>
+
+              <!-- Image 3 -->
+              <div class="lazer-image-container absolute inset-0 pointer-events-none" data-lazer-img-index="2">
+                <img src="portobello-lazer-3.webp" alt="Espaço gourmet com churrasqueira e lazer no Residencial Portobello"
+                  class="h-full w-full object-cover object-center" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#161820]/40 via-transparent to-transparent"></div>
+              </div>
+
+              <!-- Floating Glassmorphic Caption Card -->
+              <div class="lazer-caption-card absolute bottom-6 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-6 backdrop-blur-md bg-[#F2F2F0]/85 border border-[#C8CDD0] p-4 rounded-[12px] shadow-lg z-20 pointer-events-none max-w-[280px] w-[90%] sm:w-auto text-center lg:text-left">
+                <h4 class="lazer-caption-title font-display text-[16px] font-normal leading-none text-[#161820] mb-1">
+                  Piscina & Deck
+                </h4>
+                <p class="lazer-caption-desc text-[10px] font-bold text-[#3B6278] uppercase tracking-wider">
+                  Privacidade absoluta de um clube particular
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Infraestrutura Aeronáutica -->
+    <section id="hangar" class="relative w-full h-[85vh] lg:h-[90vh] min-h-[650px] overflow-hidden bg-[#161820]">
+      <!-- Background Parallax Image Wrapper -->
+      <div class="aeronautica-bg-wrapper absolute inset-0 w-full h-[120%] -top-[10%] pointer-events-none">
+        
+        <!-- Image 1 -->
+        <div class="aeronautica-bg-image absolute inset-0 active" data-hangar-img-index="0">
+          <img src="portobello-hangar-1.webp" alt="Hangar aberto com jato na pista no Residencial Portobello"
+            class="w-full h-full object-cover object-center" />
+        </div>
+
+        <!-- Image 2 -->
+        <div class="aeronautica-bg-image absolute inset-0" data-hangar-img-index="1">
+          <img src="portobello-hangar-2.webp" alt="Hangar aeronáutico privativo no Residencial Portobello"
+            class="w-full h-full object-cover object-center" />
+        </div>
+
+        <!-- Image 3 -->
+        <div class="aeronautica-bg-image absolute inset-0" data-hangar-img-index="2">
+          <img src="portobello-hangar-3.webp" alt="Pista de pouso e hangar integrado no Residencial Portobello"
+            class="w-full h-full object-cover object-center" />
+        </div>
+
+      </div>
+
+      <!-- Dark Overlay to ensure high typographic contrast -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#161820]/90 via-[#161820]/50 to-transparent z-10"></div>
+      <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#161820] to-transparent z-10"></div>
+
+      <!-- Content Container -->
+      <div class="relative z-20 mx-auto max-w-[1510px] h-full px-6 sm:px-8 lg:px-12 xl:px-14 flex items-center">
+        <div class="grid w-full grid-cols-1 lg:grid-cols-[0.65fr_0.35fr] items-center">
+          
+          <!-- Left Content Block -->
+          <div class="aeronautica-content text-white flex flex-col items-center lg:items-start text-center lg:text-left w-full">
+            <!-- Badge -->
+            <div class="aeronautica-badge docs-badge flex items-center justify-center lg:justify-start gap-2 mb-6 text-white border border-white/10 bg-[#161820]/60 backdrop-blur-md select-none w-fit">
+              <i data-lucide="plane" class="w-3.5 h-3.5 text-white"></i>
+              <span>Infraestrutura Aeronáutica</span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="aeronautica-headline font-display text-4xl sm:text-5xl lg:text-[58px] leading-[1.1] font-normal tracking-tight mb-6 max-w-2xl text-white text-center lg:text-left mx-auto lg:mx-0">
+              875 m² para guardar o que leva você mais longe.
+            </h2>
+
+            <!-- Body Copy -->
+            <p class="aeronautica-body text-[15px] sm:text-[16px] leading-[1.6] text-white/80 font-medium max-w-lg text-center lg:text-left mx-auto lg:mx-0">
+              Para quem o tempo é o bem mais escasso, o Portobello oferece hangar aeronáutico privativo de 875 m² integrado ao lote. Decolagem e chegada a partir da sua própria residência. Uma comodidade que poucos endereços no Brasil podem oferecer.
+            </p>
+
+            <!-- CTA Button -->
+            <div class="aeronautica-cta mt-8 flex flex-col sm:flex-row items-center gap-4">
+              <a href="#contato" class="btn-shine bg-white hover:bg-[#F2F2F0] text-[#161820] relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[14px] font-bold tracking-wider uppercase z-30 transition shadow-lg transform hover:-translate-y-0.5 w-full sm:w-auto justify-center">
+                <span>Agendar Apresentação</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-[#161820]"></i>
+              </a>
+              <button id="open-hangar-lightbox-btn" class="lg:hidden border border-white/20 bg-white/5 hover:bg-white/10 text-white relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[14px] font-bold tracking-wider uppercase z-30 transition shadow-lg w-full sm:w-auto justify-center">
+                <i data-lucide="eye" class="w-4 h-4 text-white"></i>
+                <span>Visualizar Fotos</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Interactive Mini-Gallery Overlay -->
+          <div class="aeronautica-gallery-controls flex lg:flex-col items-center justify-center lg:justify-end gap-2 sm:gap-3.5 mt-8 lg:mt-0 lg:pr-6 w-full">
+            <button class="hangar-thumb active relative overflow-hidden w-24 h-16 sm:w-28 sm:h-18 lg:w-36 lg:h-24 rounded-lg border-2 bg-[#161820] shadow-md transition-all duration-300 transform hover:scale-105" data-hangar-index="0">
+              <img src="portobello-hangar-1.webp" alt="Thumb Hangar 1" class="w-full h-full object-cover opacity-80" />
+            </button>
+            <button class="hangar-thumb relative overflow-hidden w-24 h-16 sm:w-28 sm:h-18 lg:w-36 lg:h-24 rounded-lg border-2 bg-[#161820] shadow-md transition-all duration-300 transform hover:scale-105" data-hangar-index="1">
+              <img src="portobello-hangar-2.webp" alt="Thumb Hangar 2" class="w-full h-full object-cover opacity-50 hover:opacity-80" />
+            </button>
+            <button class="hangar-thumb relative overflow-hidden w-24 h-16 sm:w-28 sm:h-18 lg:w-36 lg:h-24 rounded-lg border-2 bg-[#161820] shadow-md transition-all duration-300 transform hover:scale-105" data-hangar-index="2">
+              <img src="portobello-hangar-3.webp" alt="Thumb Hangar 3" class="w-full h-full object-cover opacity-50 hover:opacity-80" />
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Implantação -->
+    <section id="implantacao" class="py-20 lg:py-28 border-b border-[#C8CDD0] overflow-hidden">
+      <div class="mx-auto max-w-[1510px] px-6 sm:px-8 lg:px-12 xl:px-14">
+        <div class="grid items-center gap-12 lg:grid-cols-[0.43fr_0.57fr] xl:gap-20">
+          
+          <!-- Left Column: Editorial & Level Switcher -->
+          <div class="implantacao-content-col flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full">
+            <!-- Badge -->
+            <div class="implantacao-badge docs-badge flex items-center justify-center lg:justify-start gap-2 w-fit">
+              <i data-lucide="map" class="w-3.5 h-3.5 text-[#3B6278]"></i>
+              <span>Implantação</span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="implantacao-headline font-display text-4xl sm:text-5xl lg:text-[50px] leading-[1.1] font-normal tracking-tight text-[#161820] mt-4 mb-6 text-center lg:text-left mx-auto lg:mx-0">
+              Cada metro quadrado,<br />no lugar certo.
+            </h2>
+
+            <!-- Body Copy -->
+            <p class="implantacao-body text-[15px] sm:text-[16px] leading-[1.6] text-[#3B6278]/90 font-medium mb-10 max-w-xl text-center lg:text-left mx-auto lg:mx-0">
+              A planta foi desenvolvida para maximizar a relação entre espaço interno, lazer ao ar livre e acesso à água. Do estacionamento coberto ao atracadouro — tudo integrado, tudo seu.
+            </p>
+
+            <!-- Interactive Toggle Controls -->
+            <div class="implantacao-controls flex flex-col sm:flex-row gap-4 max-w-xs w-full justify-center lg:justify-start mx-auto lg:mx-0">
+              <button class="implantacao-toggle-btn active flex-1 text-center py-4 px-6 rounded-xl border border-[#C8CDD0] bg-transparent text-[13px] font-bold tracking-wider uppercase text-[#161820] hover:bg-black/5 whitespace-nowrap" data-blueprint="general">
+                Planta Geral
+              </button>
+              <button class="implantacao-toggle-btn flex-1 text-center py-4 px-6 rounded-xl border border-[#C8CDD0] bg-transparent text-[13px] font-bold tracking-wider uppercase text-[#161820] hover:bg-black/5 whitespace-nowrap" data-blueprint="pavimento">
+                Planta Ampliada
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Blueprint Viewer -->
+          <div class="implantacao-visual-col relative h-[450px] sm:h-[550px] lg:h-[620px] w-full rounded-[24px] border border-[#C8CDD0] bg-[#C8CDD0] p-1.5 shadow-[0_24px_64px_rgba(28,22,17,0.12)] overflow-hidden z-10">
+            <div class="blueprint-viewer relative h-full w-full overflow-hidden rounded-[18px]">
+              
+              <!-- Plan 1: Implantação Geral (portobello-planta-2.webp) -->
+              <div class="blueprint-image-pane active absolute inset-0" id="pane-general">
+                <img src="portobello-planta-2.webp" alt="Planta de Implantação Geral no Residencial Portobello" class="h-full w-full object-cover object-center" />
+              </div>
+
+              <!-- Plan 2: Planta de Pavimentos (portobello-planta-1.webp) -->
+              <div class="blueprint-image-pane absolute inset-0" id="pane-pavimento">
+                <img src="portobello-planta-1.webp" alt="Planta de Pavimentos no Residencial Portobello" class="h-full w-full object-cover object-center" />
+              </div>
+
+              <!-- Floating Zoom Indicator -->
+              <div class="blueprint-zoom-badge flex items-center gap-2">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-[#1E3040] stroke-[2]"></i>
+                <span>Clique para ampliar</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Lightbox Modal Overlay -->
+      <div id="planta-lightbox" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 opacity-0 pointer-events-none transition-all duration-300 backdrop-blur-sm">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/80 hover:text-white transition duration-200 focus:outline-none z-[110]">
+          <i data-lucide="x" class="h-8 w-8 stroke-[1.6]"></i>
+        </button>
+        <div id="lightbox-content" class="relative max-w-[90vw] max-h-[90vh] scale-95 transition-transform duration-300 ease-out z-[105] overflow-auto rounded-lg">
+          <img id="lightbox-img" src="portobello-planta-2.webp" alt="Planta Ampliada" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl mx-auto" />
+        </div>
+      </div>
+
+      <!-- Lightbox Modal for Hangar Photos Zoom -->
+      <div id="hangar-lightbox" class="fixed inset-0 z-[150] flex items-center justify-center bg-black/95 opacity-0 pointer-events-none transition-all duration-300 backdrop-blur-md">
+        <button id="hangar-lightbox-close" class="absolute top-6 right-6 text-white hover:text-[#C8CDD0] transition duration-200 focus:outline-none z-[160]">
+          <i data-lucide="x" class="h-8 w-8 stroke-[1.6]"></i>
+        </button>
+        <button id="hangar-lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-[#C8CDD0] transition duration-200 focus:outline-none z-[160] bg-white/10 hover:bg-white/20 p-3 rounded-full">
+          <i data-lucide="chevron-left" class="h-6 w-6 stroke-[2]"></i>
+        </button>
+        <div id="hangar-lightbox-content" class="relative max-w-[90vw] max-h-[85vh] scale-95 transition-transform duration-300 ease-out z-[155] overflow-auto rounded-lg">
+          <img id="hangar-lightbox-img" src="" alt="Foto do Hangar Ampliada" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl mx-auto" />
+        </div>
+        <button id="hangar-lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-[#C8CDD0] transition duration-200 focus:outline-none z-[160] bg-white/10 hover:bg-white/20 p-3 rounded-full">
+          <i data-lucide="chevron-right" class="h-6 w-6 stroke-[2]"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Section: Disponibilidade -->
+    <section id="disponibilidade" class="py-20 lg:py-28 bg-[#161820] border-b border-[#C8CDD0]/10 overflow-hidden">
+      <div class="mx-auto max-w-[1510px] px-6 sm:px-8 lg:px-12 xl:px-14">
+        
+        <div class="grid items-start gap-12 lg:grid-cols-[0.45fr_0.55fr] xl:gap-20">
+          
+          <!-- Left Column: Editorial & Available Lot Tokens -->
+          <div class="dispo-selector-col flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full">
+            <!-- Badge -->
+            <div class="dispo-badge docs-badge flex items-center justify-center lg:justify-start gap-2 mb-6 text-[#C8CDD0] border border-white/10 bg-[#161820]/60 backdrop-blur-md select-none w-fit">
+              <i data-lucide="calendar" class="w-3.5 h-3.5 text-white"></i>
+              <span>Disponibilidade</span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="dispo-headline font-display text-4xl sm:text-5xl lg:text-[50px] leading-[1.1] font-normal tracking-tight text-white mt-4 mb-6 text-center lg:text-left mx-auto lg:mx-0">
+              Lotes exclusivos.<br />Oportunidades únicas.
+            </h2>
+
+            <!-- Body Copy -->
+            <p class="dispo-body text-[15px] sm:text-[16px] leading-[1.6] text-white/70 font-medium mb-10 max-w-xl text-center lg:text-left mx-auto lg:mx-0">
+              Cada residência é vendida de forma exclusiva, com projeto de altíssimo luxo, infraestrutura completa e hangar aeronáutico privativo incluídos.
+            </p>
+
+            <!-- Specification Copy -->
+            <div class="mt-4 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
+              <p class="text-[14px] text-white/50 font-medium max-w-sm leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
+                Projetos arquitetônicos unificados de altíssimo padrão integrados a cada lote.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Premium Unified Spec Panel -->
+          <div class="dispo-panel-col flex flex-col justify-center h-full">
+            <div class="dispo-spec-panel w-full rounded-[24px] p-8 sm:p-10 flex flex-col justify-between min-h-[460px]">
+              
+              <!-- Background watermark -->
+              <div class="dispo-watermark">SPECS</div>
+
+              <!-- Header Info -->
+              <div class="flex items-center justify-between z-10 relative">
+                <div class="flex flex-col">
+                  <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Memorial de Projeto</span>
+                  <h3 class="font-display text-3xl text-white font-normal mt-1">Ficha Técnica</h3>
+                </div>
+                <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400">
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span class="text-[9px] font-bold uppercase tracking-wider">Disponíveis</span>
+                </div>
+              </div>
+
+              <!-- Specs list with linear meters -->
+              <div class="flex flex-col gap-6 my-8 py-6 border-y border-white/5 z-10 relative">
+                
+                <!-- Spec 1: Área Const -->
+                <div class="flex flex-col">
+                  <div class="flex items-end justify-between mb-2">
+                    <span class="text-[11px] font-bold text-[#C8CDD0]/60 uppercase tracking-wider">Área Construída</span>
+                    <span class="font-display text-xl text-white font-normal">980 m²</span>
+                  </div>
+                  <div class="dispo-bar-bg">
+                    <div class="dispo-bar-fill" id="dispo-bar-const" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <!-- Spec 2: Terreno -->
+                <div class="flex flex-col">
+                  <div class="flex items-end justify-between mb-2">
+                    <span class="text-[11px] font-bold text-[#C8CDD0]/60 uppercase tracking-wider">Área do Lote (Terreno)</span>
+                    <span class="font-display text-xl text-white font-normal">2.695 m²</span>
+                  </div>
+                  <div class="dispo-bar-bg">
+                    <div class="dispo-bar-fill" id="dispo-bar-terr" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <!-- Spec 3: Hangar -->
+                <div class="flex flex-col">
+                  <div class="flex items-end justify-between mb-2">
+                    <span class="text-[11px] font-bold text-[#C8CDD0]/60 uppercase tracking-wider">Hangar Aeronáutico Privativo</span>
+                    <span class="font-display text-xl text-white font-normal">875 m²</span>
+                  </div>
+                  <div class="dispo-bar-bg">
+                    <div class="dispo-bar-fill" id="dispo-bar-hangar" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Footer with Pricing and Action -->
+              <div class="flex flex-col sm:flex-row sm:items-center items-center justify-between gap-6 z-10 relative mt-2 text-center sm:text-left">
+                <div class="flex flex-col">
+                  <span class="text-[9px] font-bold text-white/30 uppercase tracking-wider">Investimento Unitário</span>
+                  <span class="font-display text-2xl text-white font-normal mt-0.5">R$ 28.000.000</span>
+                </div>
+                <a href="#contato" class="btn-shine bg-white hover:bg-[#F2F2F0] text-[#161820] relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[12px] font-bold tracking-wider uppercase transition shadow-lg transform hover:-translate-y-0.5 shrink-0">
+                  <span>Reservar Residência</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-[#161820]"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Section: Contato / CTA Final -->
+    <section id="contato" class="py-24 sm:py-36 relative flex items-center justify-center min-h-[70vh] text-center border-t border-[#C8CDD0]/10 overflow-hidden">
+      <!-- Fullbleed background image -->
+      <div class="absolute inset-0 z-0">
+        <img src="portobello-porto-1.webp" alt="Portobello Marina Canal" class="w-full h-full object-cover object-center scale-105" />
+      </div>
+      <!-- Deep dark overlay -->
+      <div class="contato-overlay-deep"></div>
+      
+      <!-- Content -->
+      <div class="relative z-20 mx-auto max-w-[1510px] px-6 sm:px-8 lg:px-12 xl:px-14 flex flex-col items-center justify-center">
+        <!-- Badge -->
+        <div class="contato-badge docs-badge inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-[#161820]/60 backdrop-blur-md text-[12px] font-extrabold uppercase tracking-wider text-[#C8CDD0] mb-6 select-none w-fit">
+          <i data-lucide="message-square" class="w-3.5 h-3.5 text-[#C8CDD0]"></i>
+          <span>Contato</span>
+        </div>
+
+        <!-- Headline -->
+        <h2 class="contato-headline font-display text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.15] text-white tracking-tight max-w-4xl mb-6">
+          Seu próximo endereço começa com uma conversa.
+        </h2>
+
+        <!-- Subtexto -->
+        <p class="contato-subtext text-xs sm:text-sm tracking-[0.12em] uppercase font-bold text-[#C8CDD0]/70 mb-10 max-w-2xl leading-relaxed">
+          Residencial Portobello &middot; 5 unidades disponíveis &middot; Mangaratiba, RJ
+        </p>
+
+        <!-- CTA Button -->
+        <button id="open-contato-btn" class="contato-btn btn-shine bg-white hover:bg-[#F2F2F0] text-[#161820] relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-[14px] font-extrabold tracking-wider uppercase transition shadow-2xl transform hover:-translate-y-0.5 cursor-pointer select-none">
+          <span>Solicitar informações exclusivas</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-[#161820]"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Minimalist Footer -->
+    <footer class="py-12 bg-[#0c0d12] border-t border-white/5 relative z-20 text-center">
+      <div class="mx-auto max-w-[1510px] px-6 sm:px-8 lg:px-12 xl:px-14 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="font-logo text-[20px] font-medium tracking-[0.12em] text-[#C8CDD0]/60">
+          Portobello
+        </div>
+        <p class="text-[12px] font-medium text-white/40">
+          &copy; 2026 Residencial Portobello. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Animation and Lenis Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const isDesktop = window.innerWidth >= 1024;
+      // 1. Initialize Lucide Icons
+      if (window.lucide) {
+        lucide.createIcons({
+          attrs: {
+            "stroke-width": 1.6
+          }
+        });
+      }
+
+      // 2. Initialize Lenis Smooth Scroll
+      if (window.Lenis) {
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+          direction: 'vertical',
+          gestureDirection: 'vertical',
+          smooth: true,
+          mouseMultiplier: 1,
+          smoothTouch: false,
+          touchMultiplier: 2,
+          infinite: false,
+        });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+      }
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function () {
+          mobileMenuBtn.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+          
+          if (mobileMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = '';
+          }
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+      }
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024 && mobileMenu && mobileMenu.classList.contains('active')) {
+          mobileMenuBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // 3. GSAP Entrance Animations
+      function initAnimations() {
+        const headlineEl = document.querySelector('.hero-headline');
+        if (headlineEl) {
+          headlineEl.style.opacity = '1';
+          const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+          tl.fromTo('.hero-badge',
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.8 },
+            0.2
+          );
+
+          if (isDesktop) {
+            const split = new SplitType(headlineEl, { types: 'lines' });
+            if (split.lines) {
+              split.lines.forEach(line => {
+                line.style.overflow = 'hidden';
+                line.style.display = 'block';
+                line.style.verticalAlign = 'bottom';
+              });
+              tl.fromTo(split.lines,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, stagger: 0.12 },
+                0.3
+              );
+            }
+          } else {
+            gsap.set(headlineEl, { opacity: 1, y: 0 });
+          }
+
+        // 3.3 Decorative horizontal line animate width 0 -> 4.1rem — delay after headline start
+        tl.fromTo('.decorative-line',
+          { width: 0 },
+          { width: '4.1rem', duration: 0.8 },
+          0.9
+        );
+
+        // 3.4 Paragraph: fade + translateY — delay 0.8s
+        tl.fromTo('.hero-body',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          0.8
+        );
+
+        // 3.5 CTA buttons: fade + translateY stagger — delay 1s
+        tl.fromTo('.hero-cta a',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15 },
+          1.0
+        );
+
+        // 3.6 Metrics: fade + translateY stagger — delay 1.2s
+        tl.fromTo('.hero-metrics-item',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15 },
+          1.2
+        );
+
+        // 3.7 Metrics subtext: fade + translateY — delay 1.5s
+        tl.fromTo('.hero-subtext',
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          1.5
+        );
+
+        // 3.8 Image: inset clipPath reveal from right to left — duration 1.2s, ease power4.inOut — delay 0.3s
+        const roundness = isDesktop ? 'round 1.35rem 0 0 1.35rem' : 'round 1.35rem';
+        tl.fromTo('.image-wrapper-anim',
+          { clipPath: `inset(0% 100% 0% 0% ${roundness})` },
+          { clipPath: `inset(0% 0% 0% 0% ${roundness})`, duration: 1.2, ease: 'power4.inOut' },
+          0.3
+        );
+
+        // 3.9 Floating Card: scale(0.92) opacity(0) -> scale(1) opacity(1) — delay 1.4s
+        tl.fromTo('.floating-card',
+          { scale: 0.92, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.8, ease: 'back.out(1.2)' },
+          1.4
+        );
+
+        // 3.10 Animated Counters for numbers starting at 1.2s
+        const counters = [
+          { id: 'metric-1-num', endVal: 980, format: false },
+          { id: 'metric-2-num', endVal: 2695, format: true },
+          { id: 'metric-3-num', endVal: 875, format: false }
+        ];
+
+        counters.forEach((counter, idx) => {
+          const el = document.getElementById(counter.id);
+          if (el) {
+            const obj = { val: 0 };
+            gsap.to(obj, {
+              val: counter.endVal,
+              duration: 1.8,
+              delay: 1.2 + (idx * 0.15),
+              ease: 'power2.out',
+              onUpdate: () => {
+                let current = Math.floor(obj.val);
+                if (counter.format) {
+                  current = current.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                }
+                el.innerText = current;
+              }
+            });
+          }
+        });
+
+        // 3.11 Breathing loop for badge to occur automatically without user interaction
+        gsap.to('.hero-badge', {
+          y: -4,
+          duration: 2.2,
+          yoyo: true,
+          repeat: -1,
+          ease: 'power1.inOut',
+          delay: 1.0
+        });
+      }
+
+      // 4. GSAP Concept Section Animations (ScrollTriggered)
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const conceptSection = document.querySelector('#concept');
+        if (conceptSection) {
+          const conceptTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: conceptSection,
+              start: 'top 80%', // start animation when top of section is 80% down the viewport
+              toggleActions: 'play none none none'
+            }
+          });
+
+          // 4.1 Badge slides in
+          conceptTl.fromTo('.concept-badge',
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+          );
+
+          // 4.2 Headline lines reveal
+          const conceptHeadline = document.querySelector('.concept-headline');
+          if (conceptHeadline) {
+            conceptHeadline.style.opacity = '1';
+            if (isDesktop) {
+              const conceptSplit = new SplitType(conceptHeadline, { types: 'lines' });
+              if (conceptSplit.lines) {
+                conceptSplit.lines.forEach(line => {
+                  line.style.overflow = 'hidden';
+                  line.style.display = 'block';
+                  line.style.verticalAlign = 'bottom';
+                });
+                conceptTl.fromTo(conceptSplit.lines,
+                  { y: 40, opacity: 0 },
+                  { y: 0, opacity: 1, duration: 1.0, stagger: 0.12, ease: 'power3.out' },
+                  '-=0.6'
+                );
+              }
+            } else {
+              gsap.set(conceptHeadline, { opacity: 1, y: 0 });
+            }
+          }
+
+          // 4.3 Double Horizon lines expand
+          conceptTl.fromTo('.concept-line-land',
+            { scaleX: 0, transformOrigin: 'left center' },
+            { scaleX: 1, duration: 1.0, ease: 'power2.out' },
+            '-=0.8'
+          );
+          conceptTl.fromTo('.concept-line-water',
+            { scaleX: 0, transformOrigin: 'right center' },
+            { scaleX: 1, duration: 1.0, ease: 'power2.out' },
+            '-=1.0'
+          );
+
+          // 4.4 Body text fade in
+          conceptTl.fromTo('.concept-body',
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+            '-=0.6'
+          );
+
+          // 4.4 Body text fade in
+          conceptTl.fromTo('.concept-body',
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+            '-=0.6'
+          );
+
+          // 4.5 Mirror image reveal (slide left-to-right)
+          const conceptRoundness = isDesktop ? 'round 0 1.35rem 1.35rem 0' : 'round 1.35rem';
+          conceptTl.fromTo('.concept-main-image-wrapper',
+            { clipPath: `inset(0% 100% 0% 0% ${conceptRoundness})` },
+            { clipPath: `inset(0% 0% 0% 0% ${conceptRoundness})`, duration: 1.2, ease: 'power4.inOut' },
+            '-=1.2'
+          );
+
+          // 4.6 Secondary overlapping image reveal
+          conceptTl.fromTo('.concept-secondary-image-wrapper',
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+            '-=0.8'
+          );
+
+          // 4.7 Compass badge scale-in
+          conceptTl.fromTo('.concept-compass-badge',
+            { opacity: 0, scale: 0 },
+            { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.2)' },
+            '-=0.6'
+          );
+
+          // 4.8 Breathing loop for compass badge
+          gsap.to('.concept-compass-badge', {
+            y: -6,
+            duration: 2.5,
+            yoyo: true,
+            repeat: -1,
+            ease: 'power1.inOut',
+            delay: 1.2
+          });
+
+          // 4.9 Parallax trigger for secondary offset image during scroll
+          gsap.to('.concept-secondary-image-wrapper', {
+            y: -60,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: conceptSection,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 1
+            }
+          });
+        }
+      }
+
+      // 5. GSAP Exclusividade Section Animations (ScrollTriggered)
+      const exclusividadeSection = document.querySelector('#exclusividade');
+      if (exclusividadeSection && window.gsap && window.ScrollTrigger) {
+        const exclusividadeTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: exclusividadeSection,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+
+        // 5.1 Badge slides in
+        exclusividadeTl.fromTo('.exclusividade-badge',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+
+        // 5.2 Headline split and reveal
+        const exclusividadeHeadline = document.querySelector('.exclusividade-headline');
+        if (exclusividadeHeadline) {
+          exclusividadeHeadline.style.opacity = '1';
+          if (isDesktop) {
+            const exclusividadeSplit = new SplitType(exclusividadeHeadline, { types: 'lines' });
+            if (exclusividadeSplit.lines) {
+              exclusividadeSplit.lines.forEach(line => {
+                line.style.overflow = 'hidden';
+                line.style.display = 'block';
+                line.style.verticalAlign = 'bottom';
+              });
+              exclusividadeTl.fromTo(exclusividadeSplit.lines,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.0, stagger: 0.12, ease: 'power3.out' },
+                '-=0.6'
+              );
+            }
+          } else {
+            gsap.set(exclusividadeHeadline, { opacity: 1, y: 0 });
+          }
+        }
+
+        // 5.4 Body copy fade in
+        exclusividadeTl.fromTo('.exclusividade-body',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 5.5 Discrete metrics items stagger in
+        exclusividadeTl.fromTo('.exclusividade-metric-item',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 5.6 Accordion panes stagger reveal
+        exclusividadeTl.fromTo('.exclusividade-pane',
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.9, stagger: 0.15, ease: 'power3.out' },
+          '-=0.6'
+        );
+      }
+
+      // 6. GSAP Lazer Section Animations (ScrollTriggered)
+      const lazerSection = document.querySelector('#lazer');
+      if (lazerSection && window.gsap && window.ScrollTrigger) {
+        const lazerTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: lazerSection,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+
+        // 6.1 Badge slides in
+        lazerTl.fromTo('.lazer-badge',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+
+        // 6.2 Headline split and reveal
+        const lazerHeadline = document.querySelector('.lazer-headline');
+        if (lazerHeadline) {
+          lazerHeadline.style.opacity = '1';
+          if (isDesktop) {
+            const lazerSplit = new SplitType(lazerHeadline, { types: 'lines' });
+            if (lazerSplit.lines) {
+              lazerSplit.lines.forEach(line => {
+                line.style.overflow = 'hidden';
+                line.style.display = 'block';
+                line.style.verticalAlign = 'bottom';
+              });
+              lazerTl.fromTo(lazerSplit.lines,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.0, stagger: 0.12, ease: 'power3.out' },
+                '-=0.6'
+              );
+            }
+          } else {
+            gsap.set(lazerHeadline, { opacity: 1, y: 0 });
+          }
+        }
+
+        // 6.3 Body copy fade in
+        lazerTl.fromTo('.lazer-body',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 6.4 Tab items stagger in
+        lazerTl.fromTo('.lazer-tab-item',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 6.5 Visual column image frame zoom-in & clip-path reveal
+        lazerTl.fromTo('.lazer-visual-col',
+          { opacity: 0, scale: 0.98, y: 30 },
+          { opacity: 1, scale: 1, y: 0, duration: 1.0, ease: 'power3.out' },
+          '-=0.8'
+        );
+      }
+
+      // 7. Interactive Tab Switching for Lazer Section
+      const lazerTabs = document.querySelectorAll('.lazer-tab-item');
+      const lazerImages = document.querySelectorAll('.lazer-image-container');
+      const captionTitle = document.querySelector('.lazer-caption-title');
+      const captionDesc = document.querySelector('.lazer-caption-desc');
+
+      const captionsData = [
+        { title: "Piscina & Deck", desc: "Privacidade absoluta de um clube particular" },
+        { title: "Refúgio de Bem-estar", desc: "Sua hidromassagem e sauna privativas" },
+        { title: "Espaço Gourmet & Lazer", desc: "Receba com sofisticação no seu próprio lote" }
+      ];
+
+      lazerTabs.forEach(tab => {
+        const index = parseInt(tab.getAttribute('data-lazer-index'), 10);
+        
+        const switchTab = () => {
+          // Deactivate current tabs and images
+          lazerTabs.forEach(t => t.classList.remove('active'));
+          lazerImages.forEach(img => img.classList.remove('active'));
+
+          // Activate target tab and image
+          tab.classList.add('active');
+          const targetImg = document.querySelector(`.lazer-image-container[data-lazer-img-index="${index}"]`);
+          if (targetImg) {
+            targetImg.classList.add('active');
+          }
+
+          // Update caption text with GSAP fade transition
+          if (captionTitle && captionDesc && captionsData[index]) {
+            gsap.to('.lazer-caption-card', {
+              opacity: 0,
+              y: 10,
+              duration: 0.25,
+              onComplete: () => {
+                captionTitle.innerText = captionsData[index].title;
+                captionDesc.innerText = captionsData[index].desc;
+                gsap.to('.lazer-caption-card', {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.4,
+                  ease: 'power2.out'
+                });
+              }
+            });
+          }
+        };
+
+        // Trigger on click
+        tab.addEventListener('click', switchTab);
+
+        // Hover interaction for desktop: trigger switch on hover for quick preview
+        tab.addEventListener('mouseenter', () => {
+          if (window.innerWidth >= 1024) {
+            switchTab();
+          }
+        });
+      });
+
+      // 8. GSAP Hangar Section Animations (ScrollTriggered)
+      const hangarSection = document.querySelector('#hangar');
+      if (hangarSection && window.gsap && window.ScrollTrigger) {
+        const hangarTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: hangarSection,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+
+        // 8.1 Badge slides in
+        hangarTl.fromTo('.aeronautica-badge',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+
+        // 8.2 Headline split and reveal
+        const hangarHeadline = document.querySelector('.aeronautica-headline');
+        if (hangarHeadline) {
+          hangarHeadline.style.opacity = '1';
+          if (isDesktop) {
+            const hangarSplit = new SplitType(hangarHeadline, { types: 'lines' });
+            if (hangarSplit.lines) {
+              hangarSplit.lines.forEach(line => {
+                line.style.overflow = 'hidden';
+                line.style.display = 'block';
+                line.style.verticalAlign = 'bottom';
+              });
+              hangarTl.fromTo(hangarSplit.lines,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.0, stagger: 0.12, ease: 'power3.out' },
+                '-=0.6'
+              );
+            }
+          } else {
+            gsap.set(hangarHeadline, { opacity: 1, y: 0 });
+          }
+        }
+
+        // 8.3 Body copy fade in
+        hangarTl.fromTo('.aeronautica-body',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 8.3.5 CTA button fade in
+        hangarTl.fromTo('.aeronautica-cta',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 8.4 Thumbnails stagger in
+        hangarTl.fromTo('.hangar-thumb',
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 8.5 Parallax scroll effect for background image
+        gsap.to('.aeronautica-bg-wrapper', {
+          y: '12%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: hangarSection,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+          }
+        });
+      }
+
+      // 9. Interactive Gallery Switcher for Hangar Section
+      const hangarThumbs = document.querySelectorAll('.hangar-thumb');
+      const hangarImages = document.querySelectorAll('.aeronautica-bg-image');
+
+      hangarThumbs.forEach(thumb => {
+        const index = parseInt(thumb.getAttribute('data-hangar-index'), 10);
+
+        const switchHangarImage = () => {
+          // Deactivate current thumbnails and images
+          hangarThumbs.forEach(t => t.classList.remove('active'));
+          hangarImages.forEach(img => img.classList.remove('active'));
+
+          // Activate selected thumbnail and background image
+          thumb.classList.add('active');
+          const targetImg = document.querySelector(`.aeronautica-bg-image[data-hangar-img-index="${index}"]`);
+          if (targetImg) {
+            targetImg.classList.add('active');
+          }
+        };
+
+        // Switch on click
+        thumb.addEventListener('click', switchHangarImage);
+
+        // Hover switch on desktop for extreme responsiveness
+        thumb.addEventListener('mouseenter', () => {
+          if (window.innerWidth >= 1024) {
+            switchHangarImage();
+          }
+        });
+      });
+
+      // 9.5 GSAP Implantação Section Animations (ScrollTriggered)
+      const implantacaoSection = document.querySelector('#implantacao');
+      if (implantacaoSection && window.gsap && window.ScrollTrigger) {
+        const implantacaoTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: implantacaoSection,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+
+        // 9.51 Badge slides in
+        implantacaoTl.fromTo('.implantacao-badge',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+
+        // 9.52 Headline split and reveal
+        const implantacaoHeadline = document.querySelector('.implantacao-headline');
+        if (implantacaoHeadline) {
+          implantacaoHeadline.style.opacity = '1';
+          if (isDesktop) {
+            const implantacaoSplit = new SplitType(implantacaoHeadline, { types: 'lines' });
+            if (implantacaoSplit.lines) {
+              implantacaoSplit.lines.forEach(line => {
+                line.style.overflow = 'hidden';
+                line.style.display = 'block';
+                line.style.verticalAlign = 'bottom';
+              });
+              implantacaoTl.fromTo(implantacaoSplit.lines,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.0, stagger: 0.12, ease: 'power3.out' },
+                '-=0.6'
+              );
+            }
+          } else {
+            gsap.set(implantacaoHeadline, { opacity: 1, y: 0 });
+          }
+        }
+
+        // 9.53 Body copy fade in
+        implantacaoTl.fromTo('.implantacao-body',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 9.54 Controls fade + translate up
+        implantacaoTl.fromTo('.implantacao-controls',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 9.55 Visual column map viewer reveal
+        implantacaoTl.fromTo('.implantacao-visual-col',
+          { opacity: 0, scale: 0.98, y: 30 },
+          { opacity: 1, scale: 1, y: 0, duration: 1.0, ease: 'power3.out' },
+          '-=0.8'
+        );
+      }
+
+      // 9.7 Interactive Switcher for Blueprint level
+      const implantacaoBtns = document.querySelectorAll('.implantacao-toggle-btn');
+      const blueprintPanes = document.querySelectorAll('.blueprint-image-pane');
+
+      implantacaoBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetBlueprint = btn.getAttribute('data-blueprint');
+          
+          // Switch active class on buttons
+          implantacaoBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Switch active class on panes with GSAP transition
+          blueprintPanes.forEach(pane => {
+            if (pane.id === `pane-${targetBlueprint}`) {
+              pane.classList.add('active');
+              // Animate active pane reveal
+              gsap.fromTo(pane, 
+                { opacity: 0, scale: 1.02 },
+                { opacity: 1, scale: 1, duration: 0.8, ease: 'power2.out' }
+              );
+            } else {
+              pane.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // 9.8 Lightbox zoom for active blueprint image
+      const blueprintViewer = document.querySelector('.blueprint-viewer');
+      const plantaLightbox = document.getElementById('planta-lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeLightboxBtn = document.getElementById('lightbox-close');
+      const lightboxContent = document.getElementById('lightbox-content');
+
+      if (blueprintViewer && plantaLightbox && lightboxImg) {
+        // Open Lightbox with active image
+        blueprintViewer.addEventListener('click', () => {
+          const activeImg = document.querySelector('.blueprint-image-pane.active img');
+          if (activeImg) {
+            lightboxImg.src = activeImg.getAttribute('src');
+            lightboxImg.alt = activeImg.getAttribute('alt') || 'Planta Ampliada';
+            
+            plantaLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+
+        // Close Lightbox function
+        const closePlantaLightbox = () => {
+          plantaLightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        };
+
+        // Close via close button
+        if (closeLightboxBtn) {
+          closeLightboxBtn.addEventListener('click', closePlantaLightbox);
+        }
+
+        // Close via click outside content
+        plantaLightbox.addEventListener('click', (e) => {
+          if (lightboxContent && !lightboxContent.contains(e.target)) {
+            closePlantaLightbox();
+          }
+        });
+
+        // Close via Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && plantaLightbox.classList.contains('active')) {
+            closePlantaLightbox();
+          }
+        });
+      }
+
+      // 9.9 Lightbox zoom for active hangar image
+      const openHangarLightboxBtn = document.getElementById('open-hangar-lightbox-btn');
+      const hangarLightbox = document.getElementById('hangar-lightbox');
+      const hangarLightboxImg = document.getElementById('hangar-lightbox-img');
+      const closeHangarLightboxBtn = document.getElementById('hangar-lightbox-close');
+      const hangarLightboxPrev = document.getElementById('hangar-lightbox-prev');
+      const hangarLightboxNext = document.getElementById('hangar-lightbox-next');
+
+      let currentHangarIndex = 0;
+      const hangarImagesSources = [
+        "portobello-hangar-1.webp",
+        "portobello-hangar-2.webp",
+        "portobello-hangar-3.webp"
+      ];
+
+      if (openHangarLightboxBtn && hangarLightbox && hangarLightboxImg) {
+        const updateLightboxImage = (index) => {
+          currentHangarIndex = (index + hangarImagesSources.length) % hangarImagesSources.length;
+          hangarLightboxImg.src = hangarImagesSources[currentHangarIndex];
+          hangarLightboxImg.alt = `Foto do Hangar ${currentHangarIndex + 1}`;
+          
+          const targetThumb = document.querySelector(`.hangar-thumb[data-hangar-index="${currentHangarIndex}"]`);
+          if (targetThumb) {
+            targetThumb.click();
+          }
+        };
+
+        openHangarLightboxBtn.addEventListener('click', () => {
+          const activeThumb = document.querySelector('.hangar-thumb.active');
+          if (activeThumb) {
+            const index = parseInt(activeThumb.getAttribute('data-hangar-index'), 10);
+            updateLightboxImage(index);
+          } else {
+            updateLightboxImage(0);
+          }
+          
+          hangarLightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          if (window.lucide) {
+            lucide.createIcons();
+          }
+        });
+
+        const closeHangarLightbox = () => {
+          hangarLightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        };
+
+        if (closeHangarLightboxBtn) {
+          closeHangarLightboxBtn.addEventListener('click', closeHangarLightbox);
+        }
+
+        if (hangarLightboxPrev) {
+          hangarLightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateLightboxImage(currentHangarIndex - 1);
+          });
+        }
+
+        if (hangarLightboxNext) {
+          hangarLightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateLightboxImage(currentHangarIndex + 1);
+          });
+        }
+
+        hangarLightbox.addEventListener('click', (e) => {
+          const content = document.getElementById('hangar-lightbox-content');
+          if (content && !content.contains(e.target)) {
+            closeHangarLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (hangarLightbox.classList.contains('active')) {
+            if (e.key === 'Escape') closeHangarLightbox();
+            if (e.key === 'ArrowLeft') updateLightboxImage(currentHangarIndex - 1);
+            if (e.key === 'ArrowRight') updateLightboxImage(currentHangarIndex + 1);
+          }
+        });
+      }
+
+      // 10. GSAP Disponibilidade Section Animations (ScrollTriggered)
+      const dispoSection = document.querySelector('#disponibilidade');
+      if (dispoSection && window.gsap && window.ScrollTrigger) {
+        const dispoTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: dispoSection,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+
+        // 10.1 Badge slides in
+        dispoTl.fromTo('.dispo-badge',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+
+        // 10.2 Headline split and reveal
+        const dispoHeadline = document.querySelector('.dispo-headline');
+        if (dispoHeadline) {
+          dispoHeadline.style.opacity = '1';
+          if (isDesktop) {
+            const dispoSplit = new SplitType(dispoHeadline, { types: 'lines' });
+            if (dispoSplit.lines) {
+              dispoSplit.lines.forEach(line => {
+                line.style.overflow = 'hidden';
+                line.style.display = 'block';
+                line.style.verticalAlign = 'bottom';
+              });
+              dispoTl.fromTo(dispoSplit.lines,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.0, stagger: 0.12, ease: 'power3.out' },
+                '-=0.6'
+              );
+            }
+          } else {
+            gsap.set(dispoHeadline, { opacity: 1, y: 0 });
+          }
+        }
+
+        // 10.3 Body copy fade in
+        dispoTl.fromTo('.dispo-body',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 10.4 Selector Column (with buttons) fade in
+        dispoTl.fromTo('.dispo-selector-col',
+          { opacity: 0, x: -30 },
+          { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 10.5 Spec Panel Column fade + scale in
+        dispoTl.fromTo('.dispo-panel-col',
+          { opacity: 0, scale: 0.95, y: 30 },
+          { opacity: 1, scale: 1, y: 0, duration: 1.0, ease: 'power3.out' },
+          '-=0.8'
+        );
+
+
+
+        // 10.7 Run specs fill inside the panel when it reveals
+        dispoTl.fromTo('#dispo-bar-const', { width: '0%' }, { width: '36%', duration: 1.2, ease: 'power3.out' }, '-=0.6');
+        dispoTl.fromTo('#dispo-bar-terr', { width: '0%' }, { width: '90%', duration: 1.2, ease: 'power3.out' }, '-=1.0');
+        dispoTl.fromTo('#dispo-bar-hangar', { width: '0%' }, { width: '32%', duration: 1.2, ease: 'power3.out' }, '-=1.0');
+      }
+
+      // 11. GSAP Contato Section Animations (ScrollTriggered)
+      const contatoSection = document.querySelector('#contato');
+      if (contatoSection && window.gsap && window.ScrollTrigger) {
+        const contatoTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: contatoSection,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        });
+
+        // 11.1 Badge slides in
+        contatoTl.fromTo('.contato-badge',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        );
+
+        // 11.2 Headline split and reveal
+        const contatoHeadline = document.querySelector('.contato-headline');
+        if (contatoHeadline) {
+          contatoHeadline.style.opacity = '1';
+          if (isDesktop) {
+            const contatoSplit = new SplitType(contatoHeadline, { types: 'lines' });
+            if (contatoSplit.lines) {
+              contatoSplit.lines.forEach(line => {
+                line.style.overflow = 'hidden';
+                line.style.display = 'block';
+                line.style.verticalAlign = 'bottom';
+              });
+              contatoTl.fromTo(contatoSplit.lines,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.0, stagger: 0.12, ease: 'power3.out' },
+                '-=0.6'
+              );
+            }
+          } else {
+            gsap.set(contatoHeadline, { opacity: 1, y: 0 });
+          }
+        }
+
+        // 11.3 Subtext fade in
+        contatoTl.fromTo('.contato-subtext',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+
+        // 11.4 CTA button fade + scale in
+        contatoTl.fromTo('.contato-btn',
+          { opacity: 0, scale: 0.95, y: 20 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        );
+      }
+
+      // 12. Contact Modal Interactions
+      const openContatoBtn = document.getElementById('open-contato-btn');
+      const closeContatoBtn = document.getElementById('contato-modal-close');
+      const closeContatoBg = document.getElementById('contato-modal-close-bg');
+      const contatoModal = document.getElementById('contato-modal');
+      const contatoForm = document.getElementById('contato-form');
+      const contatoFormContainer = document.getElementById('contato-form-container');
+      const contatoSuccessContainer = document.getElementById('contato-success-container');
+      const closeSuccessBtn = document.getElementById('contato-success-close');
+
+      if (contatoModal && openContatoBtn) {
+        const openModal = () => {
+          contatoModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          // Re-initialize Lucide check icon inside modal
+          if (window.lucide) {
+            lucide.createIcons();
+          }
+        };
+
+        const closeModal = () => {
+          contatoModal.classList.remove('active');
+          document.body.style.overflow = '';
+          // Reset form success states back after transition finishes
+          setTimeout(() => {
+            contatoFormContainer.classList.remove('hidden');
+            contatoSuccessContainer.classList.add('hidden');
+            contatoFormContainer.style.opacity = '1';
+            contatoFormContainer.style.transform = 'translateY(0)';
+            if (contatoForm) {
+              contatoForm.reset();
+            }
+          }, 400);
+        };
+
+        // Open listeners
+        openContatoBtn.addEventListener('click', openModal);
+        
+        // Hijack any anchor pointing to #contato
+        const consultorBtns = document.querySelectorAll('a[href="#contato"]');
+        consultorBtns.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+          });
+        });
+
+        // Close listeners
+        if (closeContatoBtn) closeContatoBtn.addEventListener('click', closeModal);
+        if (closeContatoBg) closeContatoBg.addEventListener('click', closeModal);
+        if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && contatoModal.classList.contains('active')) {
+            closeModal();
+          }
+        });
+
+        // Form submission success handling
+        if (contatoForm) {
+          contatoForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Animate transition between form and success screen
+            gsap.to(contatoFormContainer, {
+              opacity: 0,
+              y: -15,
+              duration: 0.3,
+              onComplete: () => {
+                contatoFormContainer.classList.add('hidden');
+                contatoSuccessContainer.classList.remove('hidden');
+                
+                // Animate success screen in
+                gsap.fromTo(contatoSuccessContainer,
+                  { opacity: 0, y: 15 },
+                  { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
+                );
+              }
+            });
+          });
+        }
+      }
+      }
+
+      // Execute initialization only after all custom fonts are fully loaded to prevent text split calculations running on fallback fonts
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(initAnimations);
+      } else {
+        window.addEventListener('load', initAnimations);
+      }
+    });
+  </script>
+  <!-- Contact Modal Form -->
+  <div id="contato-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 opacity-0 pointer-events-none backdrop-blur-md">
+    <!-- Modal Close Overlay click area -->
+    <div id="contato-modal-close-bg" class="absolute inset-0 cursor-default"></div>
+    
+    <!-- Modal Panel -->
+    <div id="contato-modal-panel" class="relative w-full max-w-md mx-4 rounded-2xl p-8 sm:p-10 z-[105]">
+      <!-- Close Button -->
+      <button id="contato-modal-close" class="absolute top-4 right-4 text-[#161820]/60 hover:text-[#161820] transition duration-200 focus:outline-none">
+        <i data-lucide="x" class="h-6 w-6 stroke-[1.6]"></i>
+      </button>
+
+      <!-- Form Content Wrapper -->
+      <div id="contato-form-container">
+        <div class="mb-8">
+          <span class="text-[9px] font-bold text-[#3B6278] uppercase tracking-wider">Apresentação Exclusiva</span>
+          <h3 class="font-display text-[28px] text-[#161820] font-normal leading-tight mt-1">Solicitar Informações</h3>
+          <p class="text-xs text-[#3B6278] leading-relaxed mt-2">
+            Insira seus dados para receber o book digital completo, plantas técnicas e detalhes comerciais das 5 unidades remanescentes.
+          </p>
+        </div>
+
+        <form id="contato-form" class="space-y-5">
+          <div>
+            <label class="block text-[10px] font-bold text-[#1E3040] uppercase tracking-wider mb-2">Nome Completo</label>
+            <input required type="text" name="name" placeholder="Ex: Diogo Silva" class="contato-input w-full px-4 py-3 rounded-xl text-sm font-semibold text-[#161820] placeholder-[#3B6278]/40" />
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-[#1E3040] uppercase tracking-wider mb-2">E-mail</label>
+            <input required type="email" name="email" placeholder="Ex: diogo@exemplo.com" class="contato-input w-full px-4 py-3 rounded-xl text-sm font-semibold text-[#161820] placeholder-[#3B6278]/40" />
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-[#1E3040] uppercase tracking-wider mb-2">Telefone / WhatsApp</label>
+            <input required type="tel" name="phone" placeholder="Ex: (21) 99999-9999" class="contato-input w-full px-4 py-3 rounded-xl text-sm font-semibold text-[#161820] placeholder-[#3B6278]/40" />
+          </div>
+          <button type="submit" class="w-full bg-[#1E3040] hover:bg-[#3B6278] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-lg mt-6">
+            Enviar Solicitação
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Content Wrapper (Hidden initially) -->
+      <div id="contato-success-container" class="hidden flex flex-col items-center text-center py-6">
+        <div class="h-16 w-16 rounded-full bg-[#3B6278]/10 flex items-center justify-center mb-6">
+          <i data-lucide="check" class="h-8 w-8 text-[#3B6278] stroke-[2]"></i>
+        </div>
+        <h3 class="font-display text-[26px] text-[#161820] font-normal leading-tight">Solicitação Recebida</h3>
+        <p class="text-xs text-[#3B6278] leading-relaxed mt-3 max-w-sm">
+          Agradecemos o seu interesse. Um especialista em atendimento exclusivo entrará em contato nas próximas horas para fornecer todas as informações e agendar sua visita ao canal.
+        </p>
+        <button id="contato-success-close" class="mt-8 border border-[#C8CDD0] hover:border-[#161820] hover:bg-[#161820]/5 text-[#161820] px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors">
+          Fechar Janela
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
