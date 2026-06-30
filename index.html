@@ -6137,21 +6137,57 @@
             contatoForm.addEventListener('submit', (e) => {
               e.preventDefault();
 
-              // Animate transition between form and success screen
-              gsap.to(contatoFormContainer, {
-                opacity: 0,
-                y: -15,
-                duration: 0.3,
-                onComplete: () => {
-                  contatoFormContainer.classList.add('hidden');
-                  contatoSuccessContainer.classList.remove('hidden');
+              const submitBtn = contatoForm.querySelector('button[type="submit"]');
+              const originalBtnText = submitBtn.innerText;
+              submitBtn.innerText = 'Enviando...';
+              submitBtn.disabled = true;
 
-                  // Animate success screen in
-                  gsap.fromTo(contatoSuccessContainer,
-                    { opacity: 0, y: 15 },
-                    { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
-                  );
-                }
+              const formData = new FormData(contatoForm);
+              const name = formData.get('name');
+              const email = formData.get('email');
+              const phone = formData.get('phone');
+              
+              const customMessage = `Olá Rudy,\n\nVocê tem um novo lead interessado no Stone Hills!\n\nDados do Lead:\nNome: ${name}\nE-mail: ${email}\nTelefone/WhatsApp: ${phone}\n\nEntre em contato o mais breve possível para oferecer um atendimento exclusivo!`;
+
+              fetch("https://formsubmit.co/ajax/rudycorretor@gmail.com", {
+                method: "POST",
+                headers: { 
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                  _subject: "Novo Lead Stone Hills",
+                  _captcha: "false",
+                  Mensagem: customMessage
+                })
+              })
+              .then(response => response.json())
+              .then(data => {
+                // Animate transition between form and success screen
+                gsap.to(contatoFormContainer, {
+                  opacity: 0,
+                  y: -15,
+                  duration: 0.3,
+                  onComplete: () => {
+                    contatoFormContainer.classList.add('hidden');
+                    contatoSuccessContainer.classList.remove('hidden');
+
+                    // Animate success screen in
+                    gsap.fromTo(contatoSuccessContainer,
+                      { opacity: 0, y: 15 },
+                      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
+                    );
+                    
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                  }
+                });
+              })
+              .catch(error => {
+                console.error(error);
+                alert("Ocorreu um erro ao enviar. Por favor, tente novamente mais tarde.");
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
               });
             });
           }
