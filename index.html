@@ -6218,15 +6218,15 @@
               
               const customMessage = `Olá Rudy,\n\nVocê tem um novo lead interessado no Stone Hills!\n\nDados do Lead:\nNome: ${name}\nE-mail: ${email}\nTelefone/WhatsApp: ${phone}\n\nEntre em contato o mais breve possível para oferecer um atendimento exclusivo!`;
 
-              fetch("https://formsubmit.co/ajax/rudycorretor@gmail.com", {
+              fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: { 
                   'Content-Type': 'application/json',
                   'Accept': 'application/json'
                 },
                 body: JSON.stringify({
-                  _subject: "Novo Lead Stone Hills",
-                  _captcha: "false",
+                  access_key: "04d38646-5eb5-43bd-b225-ec683da3beee",
+                  subject: "Novo Lead Stone Hills",
                   Mensagem: customMessage
                 })
               })
